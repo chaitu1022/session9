@@ -1,0 +1,24 @@
+<div class="container" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+        <div class="mb-3">
+            <label class="form-label"><b>Employee Id :</b></label>
+            <label class="form-label">{{employee?.id}}</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"><b>Name :</b></label>
+            <label class="form-label">{{employee?.name}}</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"><b>Email :</b></label>
+            <label class="form-label">{{employee?.email}}</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"><b>Phone Number :</b></label>
+            <label class="form-label">{{employee?.phonenumber}}</label>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" (click)="BackToEmployee()" >Back to Employee</button>
+            <button class="btn btn-primary" (click)="NextEmployee()" >Next Employee</button>
+        </div>
+    </div>
+</div>

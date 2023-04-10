@@ -1,0 +1,27 @@
+<div class="container" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+      <div class="offset-3 " style="margin: 10px;text-align: end;" >
+        <input type="search" name="search" [(ngModel)]="searchText"  class="form-control"  placeholder="Search Employee"  (input)="searchEmployee()" >
+      </div>
+        <div class="card">
+         
+            <div class="card-header">
+              Employee List
+            </div>
+            <ul class="list-group list-group-flush">
+              <li [ngClass]="previouslySelectedId === employee.id ? 'red': ''" [routerLink]='["/viewEmployee", employee.id]'  
+              [queryParams]="{ 'empSearch': searchText }"
+               style="cursor: pointer;" class="list-group-item" *ngFor="let employee of Employees" >
+                    {{employee.id}}::{{employee.name}}
+                </li>
+            </ul>
+          </div>
+    </div>
+</div>
+
+<!-- 
+<li [ngClass]="previouslySelectedId === employee.id ? 'red': ''" style="cursor: pointer;" [routerLink]='["/details", employee.id]' class="list-group-item" *ngFor="let employee of Employees" >
+  {{employee.id}}::{{employee.name}}
+</li> -->
+
+<!-- [queryParams]="{ 'searchText': searchText, 'id': employee.id }" -->
